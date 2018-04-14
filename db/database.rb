@@ -1,14 +1,16 @@
 require 'yaml'
-require 'sequel'
+require './lib/ports/persistence/sequel_adapter/base'
 
 module Database
 
   def self.init
-    Sequel::Model.db = database
+    @database ||= SequelAdapter::Base.init database_config
   end
 
   def self.database
-    Sequel.connect database_config
+    init 
+
+    @database
   end
 
   def self.database_config

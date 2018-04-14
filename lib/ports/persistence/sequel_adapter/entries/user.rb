@@ -1,4 +1,4 @@
-module Entries
+class SequelAdapter::Entries
   class User < Sequel::Model
 
   end

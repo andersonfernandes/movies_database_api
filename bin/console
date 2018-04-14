@@ -1,11 +1,15 @@
 #!/usr/bin/env ruby
 
+require 'require_all'
 require 'bundler/setup'
 require 'sequel'
 require 'pry'
 
-require './app'
+require_all 'app'
 require './db/database'
-require './app/entries/user'
+
+::Database.init
+
+require_all 'lib/ports/persistence/sequel_adapter/'
 
 Pry.start

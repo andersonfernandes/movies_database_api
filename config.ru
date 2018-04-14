@@ -3,6 +3,8 @@ require 'bundler'
 
 Bundler.require(:default, ENV['RACK_ENV'].to_sym)
 
-require './app'
+require './db/database'
+run Database.init
 
+require './app'
 run MoviesDatabase

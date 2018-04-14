@@ -13,6 +13,7 @@ gem 'require_all'
 
 group :development, :test do
   gem 'pry'
+  gem 'dotenv'
 end
 
 group :test do

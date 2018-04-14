@@ -3,13 +3,14 @@ require_all 'lib/ports/persistence/sequel_adapter/'
 
 class MoviesDatabase < Sinatra::Base
 
+  register Sinatra::Namespace
+
   configure :development do
     register Sinatra::Reloader
-    register Sinatra::Namespace
   end
 
   before do
-    content_type 'application/json'
+    content_type :json
   end
 
   get '/' do

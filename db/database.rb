@@ -17,7 +17,7 @@ module Database
     database_config = nil
 
     begin
-      database_config = YAML::load_file(File.join(__dir__, 'config.yml'))
+      database_config = YAML::load(ERB.new(File.read('db/config.yml')).result)
     rescue
       database_config = {}
     end

@@ -6,5 +6,6 @@ require 'pry'
 
 require './app'
 require './db/database'
+require './app/entries/user'
 
 Pry.start

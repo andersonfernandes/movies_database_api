@@ -3,6 +3,10 @@ require 'sequel'
 
 module Database
 
+  def self.init
+    Sequel::Model.db = database
+  end
+
   def self.database
     Sequel.connect database_config
   end

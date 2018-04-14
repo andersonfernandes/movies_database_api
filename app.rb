@@ -1,12 +1,15 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
 require 'sinatra/namespace'
+require './db/database'
 
 class MoviesDatabase < Sinatra::Base
 
   configure :development do
     register Sinatra::Reloader
     register Sinatra::Namespace
+
+    ::Database.init
   end
 
   before do

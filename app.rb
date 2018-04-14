@@ -1,6 +1,3 @@
-require 'sinatra/base'
-require 'sinatra/reloader'
-require 'sinatra/namespace'
 require './db/database'
 require_all 'lib/ports/persistence/sequel_adapter/'
 

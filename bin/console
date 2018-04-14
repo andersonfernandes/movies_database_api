@@ -8,8 +8,4 @@ require 'pry'
 require_all 'app'
 require './db/database'
 
-::Database.init
-
-require_all 'lib/ports/persistence/sequel_adapter/'
-
 Pry.start

@@ -6,7 +6,9 @@ ruby '2.5.1'
 
 gem 'sinatra'
 gem 'sinatra-contrib'
+gem 'pg'
 gem 'sequel'
+gem 'rake'
 
 group :development, :test do
   gem 'pry'

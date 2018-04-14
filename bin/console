@@ -1,7 +1,10 @@
 #!/usr/bin/env ruby
 
 require 'bundler/setup'
-require './app'
+require 'sequel'
 require 'pry'
+
+require './app'
+require './db/database'
 
 Pry.start

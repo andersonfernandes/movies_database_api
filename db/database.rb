@@ -1,4 +1,5 @@
 require 'yaml'
+require 'erb'
 require './lib/ports/persistence/sequel_adapter/base'
 
 module Database

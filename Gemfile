@@ -10,6 +10,7 @@ gem 'pg'
 gem 'sequel'
 gem 'rake'
 gem 'require_all'
+gem 'sinatra-param'
 
 group :development, :test do
   gem 'pry'

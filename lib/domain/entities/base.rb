@@ -1,0 +1,21 @@
+module Domain
+  module Entities
+    class Base
+      def initialize args
+        self.attributes = args
+      end
+
+      def attributes= attributes = {}
+        attributes.each do |k, v|
+          self.send "#{k}=", v
+        end
+      end
+
+      def to_hash
+        Hash[*instance_variables.map { |v|
+          [v.to_s.tr('@', '').to_sym, instance_variable_get(v)]
+        }.flatten]
+      end
+    end
+  end
+end
